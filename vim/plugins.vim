@@ -1,23 +1,3 @@
-syntax on
-
-let mapleader=","
-
-set expandtab
-set shiftwidth=2
-set softtabstop=2
-set number
-set nowrap
-set textwidth=0 wrapmargin=0
-
-set nocompatible
-filetype off
-
-set wildignore+=node_modules/**,public/**
-
-" Disable automatic word wrapping
-:set textwidth=0 
-:set wrapmargin=0
-
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
@@ -70,16 +50,3 @@ Plugin 'matchit.zip'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
-
-colorscheme neodark
-
-" vim-airline settings
-let g:airline#extensions#tabline#enabled = 1
-
-" Extra keybinding for escape
-inoremap Ctrl+[ <Esc>
-
-" Newlines without insert mode
-nmap <S-Enter> O<Esc>
-nmap <CR> o<Esc>
-
