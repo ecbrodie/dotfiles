@@ -1,0 +1,37 @@
+"*":
+  "atom-beautify":
+    general:
+      _analyticsUserId: "cfddb692-a11c-4cd3-b7bb-8bb8cc859944"
+  autosave:
+    enabled: true
+  core:
+    disabledPackages: [
+      "activate-power-mode"
+      "linter-eslint"
+      "linter"
+    ]
+    ignoredNames: [
+      ".git"
+      ".hg"
+      ".svn"
+      ".DS_Store"
+      "._*"
+      "Thumbs.db"
+      "node_modules"
+      ".tmp"
+    ]
+    telemetryConsent: "no"
+  "disable-keybindings":
+    bundledPackages: [
+      "editor:delete-to-beginning-of-line"
+    ]
+  editor:
+    fontSize: 15
+    invisibles: {}
+    showIndentGuide: true
+    showInvisibles: true
+    softWrap: true
+  "exception-reporting":
+    userId: "84051d54-b66a-659d-c9a5-deda95257135"
+  welcome:
+    showOnStartup: false
