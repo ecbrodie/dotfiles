@@ -7,12 +7,11 @@ source $ZSH/oh-my-zsh.sh
 # Prevent MAC extended attribute files (files starting with ._) from being included in tarballs
 export COPYFILE_DISABLE=true
 
+# Shell Options
+setopt HIST_FIND_NO_DUPS
+
 # Preferred editor for local and remote sessions
- if [[ -n $SSH_CONNECTION ]]; then
-   export EDITOR='vim'
- else
-   export EDITOR='mvim'
- fi
+export EDITOR='vim'
 
 alias mzshrc='mvim ~/.zshrc'
 
@@ -67,11 +66,15 @@ alias rollback='rake db:rollback'
 alias vundle='vim +PluginInstall +qall'
 alias vundle-clean='vim +PluginClean +qall'
 
-# RVM Stuff
-[[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
-
 # Docker Stuffs
 alias docker-rm-containers='docker rm `docker ps --no-trunc -aq`'
+docker-run-once() {
+	docker run -i -t --rm $1 bash
+}
+alias docker-clean-images='docker images -f dangling=true -q'
+
+# RVM Stuff
+[[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
