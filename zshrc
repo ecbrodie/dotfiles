@@ -81,6 +81,6 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 brupdate() {
   brew update
   brew upgrade
-  brew linkapps
+  brew cleanup
   brew doctor
 }
