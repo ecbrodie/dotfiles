@@ -1,10 +1,11 @@
 {
     "editor.renderWhitespace": "boundary",
+    "editor.tabSize": 2,
     "editor.wordWrap": "on",
     "files.autoSave": "off",
     "gitlens.blame.annotation.activeLine": "off",
     "gitlens.codeLens.visibility": "off",
     "telemetry.enableTelemetry": false,
-    "workbench.iconTheme": "vscode-icons",
-    "workbench.colorTheme": "Solarized Light"
+    "workbench.colorTheme": "Solarized Light",
+    "workbench.iconTheme": "vscode-icons"
 }
