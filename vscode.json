@@ -2,7 +2,7 @@
     "editor.renderWhitespace": "boundary",
     "editor.tabSize": 2,
     "editor.wordWrap": "on",
-    "files.autoSave": "off",
+    "files.autoSave": "onFocusChange",
     "gitlens.blame.annotation.activeLine": "off",
     "gitlens.codeLens.visibility": "off",
     "telemetry.enableTelemetry": false,
