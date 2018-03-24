@@ -54,13 +54,22 @@ alias gci='git commit'
 alias gup='git pull --rebase --stat'
 alias gpf='git push --force-with-lease'
 alias gwipall='git add . && gwip'
+alias gdc='git diff --cached'
+alias gap='git add --patch'
 
 # Rails aliases
 alias be='bundle exec'
-export RAILS_FOOTNOTES_EDITOR=rubymine
 function n() { node_modules/.bin/$@ ;}
 alias dbstatus='rake db:migrate:status'
 alias rollback='rake db:rollback'
+alias fstart='foreman start'
+
+# Yarn aliases
+alias y='yarn'
+alias yt='yarn test'
+alias ytw='yarn test --watch'
+alias yl='yarn lint'
+alias yr='yarn run'
 
 # Vim aliases
 alias vundle='vim +PluginInstall +qall'
