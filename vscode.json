@@ -1,12 +1,21 @@
 {
-    "editor.renderWhitespace": "boundary",
-    "editor.wordWrap": "on",
-    "files.autoSave": "onFocusChange",
-    "files.insertFinalNewline": true,
-    "gitlens.codeLens.enabled": false,
-    "gitlens.currentLine.enabled": false,
-    "gitlens.hovers.currentLine.over": "line",
-    "gitlens.keymap": "alternate",
-    "window.zoomLevel": 0,
-    "workbench.colorTheme": "Solarized Light"
+  "editor.fontSize": 13,
+  "editor.formatOnSave": true,
+  "editor.minimap.enabled": false,
+  "editor.renderWhitespace": "boundary",
+  "editor.wordWrap": "on",
+  "explorer.confirmDragAndDrop": false,
+  "files.autoSave": "onFocusChange",
+  "files.insertFinalNewline": true,
+  "gitlens.advanced.messages": {
+    "suppressShowKeyBindingsNotice": true
+  },
+  "gitlens.codeLens.enabled": false,
+  "gitlens.currentLine.enabled": false,
+  "gitlens.hovers.currentLine.over": "line",
+  "gitlens.keymap": "alternate",
+  "prettier.disableLanguages": ["markdown"],
+  "window.zoomLevel": 0,
+  "workbench.colorTheme": "Solarized Light",
+  "workbench.editor.enablePreview": false
 }
