@@ -1,4 +1,4 @@
-ZSH_THEME="robbyrussell"
+ZSH_THEME="robbyrussell-WIP"
 
 plugins=(git autojump brew common-aliases gem rails web-search rake-fast bundler zsh-autosuggestions)
 
