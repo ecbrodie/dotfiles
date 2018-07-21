@@ -1,6 +1,6 @@
 ZSH_THEME="robbyrussell-WIP"
 
-plugins=(git autojump brew common-aliases gem rails web-search rake-fast bundler zsh-autosuggestions)
+plugins=(git autojump brew common-aliases gem rails web-search zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -28,19 +28,6 @@ alias untarball='tar -zxvf'
 alias zipper='zip -r -X'
 alias kill9='kill -9'
 alias psaux='ps aux | grep'
-
-# place this after nvm initialization!
-# autoload -U add-zsh-hook
-# load-nvmrc() {
-#   if [[ -f .nvmrc && -r .nvmrc ]]; then
-#     nvm use
-#   elif [[ $(nvm version) != $(nvm version default)  ]]; then
-#     echo "Reverting to nvm default version"
-#     nvm use default
-#   fi
-# }
-# add-zsh-hook chpwd load-nvmrc
-# load-nvmrc
 
 # Git aliases.
 alias glog='glol'
