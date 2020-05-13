@@ -1,24 +1,27 @@
-" set our tabs to X spaces
-set ts=2
-set shiftwidth=2
+" vim-plug (Neovim package manager)
+call plug#begin('~/.vim/plugged')
+Plug 'joshdick/onedark.vim'
+Plug 'sheerun/vim-polyglot'
+call plug#end()
 
-" turn syntax highlighting on by default
+set number
 syntax on
+set smartindent
+colorscheme onedark
 
-" set auto-indenting on for programming
-set ai
+" 2 space tabs
+set tabstop=2
+set shiftwidth=2
+set smarttab
+set expandtab
 
-" turn off compatibility with the old vi
-set nocompatible
+" Disable evil auto word wrapping
+set formatoptions-=t
+set wrap
+set linebreak
 
-" turn on the "visual bell" - which is much quieter than the "audio blink"
-set vb
-
-" do not highlight words when searching for them. it's distracting.
-set nohlsearch
-
-" automatically show matching brackets. works like it does in bbedit.
-set showmatch
+" Clear search highlighting on double-esc (https://vi.stackexchange.com/a/5392/19754)
+nnoremap <esc> :noh<return><esc>
 
 " do NOT put a carriage return at the end of the last line! if you are programming
 " for the web the default will cause http headers to be sent. that's bad.
@@ -27,15 +30,11 @@ set binary noeol
 " make that backspace key work the way it should
 set backspace=indent,eol,start
 
-" use spaces instead of tabs
-set expandtab
+" automatically show matching brackets. works like it does in bbedit.
+set showmatch
 
-" Quick-Start for spell
-:setlocal spell spelllang=en_ca
+" turn on the "visual bell" - which is much quieter than the "audio blink"
+set vb
 
-" Soft word wrap
-set linebreak
-
-" Use the Twilight color scheme (http://www.vim.org/scripts/script.php?script_id=1677)
-:color twilight
-
+" do not highlight words when searching for them. it's distracting.
+" set nohlsearch
