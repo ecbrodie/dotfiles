@@ -1,0 +1,12 @@
+[alias]
+	br = branch
+	ci = commit
+	co = checkout
+	st = status
+	ignore = update-index --assume-unchanged
+	unignore = update-index --no-assume-unchanged
+	ignored = !git ls-files -v | grep "^[[:lower:]]"
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  current-branch = rev-parse --abbrev-ref HEAD
+  reset-origin = "!f() { git fetch; git reset --hard origin/$(git current-branch); }; f"
+	dad = !curl https://icanhazdadjoke.com/ && git add

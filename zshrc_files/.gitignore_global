@@ -1,0 +1,10 @@
+*~
+.DS_Store
+/.idea/
+.rake_tasks
+
+tags
+gems.tags
+
+.vscode/
+.idea/
