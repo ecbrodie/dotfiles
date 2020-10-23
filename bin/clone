@@ -1,0 +1,20 @@
+#!/bin/bash
+set -e
+
+while getopts :p opt; do
+  case $opt in
+    p)
+      CONFIG="-c user.email=brodie.evan@gmail.com"
+      ;;
+  esac  
+done
+
+shift $(($OPTIND - 1))
+REPO=$1
+
+if [ -z $REPO ] ; then
+  echo "MISSING REPO"
+  exit 1
+fi
+
+git clone $CONFIG $REPO

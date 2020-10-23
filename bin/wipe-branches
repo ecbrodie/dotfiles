@@ -1,0 +1,44 @@
+#!/usr/bin/env bash
+
+# TODO: Dependabot branches not supported
+
+usage() {
+	echo "Usage: wipe-branches [-e branch-name ...]" 1>&2
+	exit 1
+}
+
+while getopts 'e' option
+do
+	case $option in
+		e)
+			HAS_EXTRA_EXCLUDE_BRANCHES=true
+			;;
+		*)
+			usage
+	esac
+done
+
+shift $(( OPTIND - 1 ))
+
+EXCLUDED_BRANCHES='master main production'
+if [[ -n "${HAS_EXTRA_EXCLUDE_BRANCHES:-}" ]] ; then
+	EXCLUDED_BRANCHES="${EXCLUDED_BRANCHES} $@"
+fi
+
+
+GIT_BRANCHES=$(git for-each-ref --format='%(refname:short)' refs/heads)
+for branch in ${GIT_BRANCHES} ; do
+	SHOULD_DELETE=true
+
+	for excludedBranch in ${EXCLUDED_BRANCHES} ; do
+		if [[ "${branch}" == "${excludedBranch}" ]] ; then
+			SHOULD_DELETE=false
+			break
+		fi
+	done
+
+	if [[ "true" == "${SHOULD_DELETE}" ]]; then
+		git delete-branch "${branch}"
+	fi
+done
+

@@ -1,0 +1,9 @@
+#!/usr/bin/env zsh
+
+(
+  set -e
+  set -u
+  local times=$1
+  shift
+  repeat ${times} { $@; if [ $? != 0 ]; then break; fi }
+)

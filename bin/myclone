@@ -1,0 +1,8 @@
+#!/bin/bash
+set -e
+
+CONFIG="-c user.email=brodie.evan@gmail.com"
+REPO=$1
+
+git clone $CONFIG $REPO
+
