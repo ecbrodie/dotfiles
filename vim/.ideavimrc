@@ -1,0 +1,9 @@
+source ~/.vimrc
+
+set surround
+set multiple-cursors
+set ideajoin
+
+" Undos custom mapping on <esc> because it does not play nice with IdeaVim
+unmap <esc>
+unmap <esc>^[

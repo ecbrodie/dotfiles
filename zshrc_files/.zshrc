@@ -50,7 +50,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 
 #plugins=(git autojump brew common-aliases gem rails web-search zsh-autosuggestions)
-plugins=(git git-extras rake-fast vi-mode autojump)
+plugins=(git git-extras vi-mode gh ag copypath copyfile fd fzf safe-paste urltools zsh-interactive-cd)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -159,8 +159,6 @@ export PATH="/usr/local/sbin:$PATH" # Recommended by Homebrew
 
 # NVM Stuff
 source ~/.lazy_nvm
-
-
 
 # Custom bindings to support iTerm keymappings
 bindkey "^U" backward-kill-line
