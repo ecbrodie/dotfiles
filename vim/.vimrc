@@ -8,11 +8,11 @@ call plug#begin('~/.vim/plugged')
 Plug 'joshdick/onedark.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-abolish'
 Plug 'vim-scripts/matchit.zip'
 Plug 'tomtom/tcomment_vim'
 call plug#end()
 
-set number
 syntax on
 "set smartindent
 colorscheme onedark
@@ -22,6 +22,11 @@ set tabstop=2
 set shiftwidth=2
 set smarttab
 set expandtab
+set autoindent
+filetype plugin indent on
+
+" Hybrid line numbers
+set nu rnu
 
 " Disable evil auto word wrapping
 set formatoptions-=t
@@ -42,7 +47,19 @@ set showmatch
 " turn on the "visual bell" - which is much quieter than the "audio blink"
 set vb
 
+" Clear search highlighting on escape in normal mode
+nnoremap <esc> :noh<return><esc>
+nnoremap <esc>^[ <esc>^[
+
 " Newlines without insert mode
 nmap <S-Enter> O<Esc>
 nnoremap ✠ O<Esc>
 nmap <CR> o<Esc>
+
+" Repeat last macro with comma, as influenced by https://vi.stackexchange.com/a/14235/19754
+" Except, I am only mapping the key for normal mode.
+" NOTE: Commenting out for now because I prefer using comma for reverse character search
+" nnoremap , @@
+
+" Use leader-s (\s) to search-replace current word in doc
+:nnoremap <Leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>

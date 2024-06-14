@@ -1,21 +1,184 @@
 {
-  "editor.fontSize": 13,
-  "editor.formatOnSave": true,
+  "[go]": {
+    "editor.tabSize": 4
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features",
+    "editor.formatOnSave": false
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features",
+    "editor.formatOnSave": false
+  },
+  "[markdown]": {
+    "editor.quickSuggestions": {
+      "comments": "off",
+      "strings": "off",
+      "other": "off"
+    },
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+  },
+  "[plaintext]": {
+    "editor.quickSuggestions": {
+      "comments": "off",
+      "strings": "off",
+      "other": "off"
+    }
+  },
+  "[properties]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[yaml]": {
+    "editor.formatOnSave": false
+  },
+  "breadcrumbs.enabled": true,
+  "editor.formatOnPaste": true,
   "editor.minimap.enabled": false,
+  "editor.multiCursorModifier": "alt",
+  "editor.quickSuggestions": {
+    "comments": true,
+    "other": true,
+    "strings": true
+  },
+  "editor.renderLineHighlight": "gutter",
   "editor.renderWhitespace": "boundary",
+  "editor.tabSize": 2,
   "editor.wordWrap": "on",
+  "explorer.autoReveal": false,
+  "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "files.autoSave": "onFocusChange",
   "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "git.confirmSync": false,
+  "git.inputValidation": true,
   "gitlens.advanced.messages": {
+    "suppressIntegrationDisconnectedTooManyFailedRequestsWarning": true,
     "suppressShowKeyBindingsNotice": true
   },
-  "gitlens.codeLens.enabled": false,
-  "gitlens.currentLine.enabled": false,
   "gitlens.hovers.currentLine.over": "line",
   "gitlens.keymap": "alternate",
-  "prettier.disableLanguages": ["markdown"],
-  "window.zoomLevel": 0,
-  "workbench.colorTheme": "Solarized Light",
-  "workbench.editor.enablePreview": false
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "prettier.disableLanguages": [
+    "markdown"
+  ],
+  "telemetry.enableTelemetry": false,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "workbench.colorCustomizations": {
+    "activityBarBadge.background": "#2979FF",
+    "breadcrumb.activeSelectionForeground": "#2979FF",
+    "editorSuggestWidget.highlightForeground": "#2979FF",
+    "editorWidget.border": "#2979FF",
+    "editorWidget.resizeBorder": "#2979FF",
+    "list.activeSelectionForeground": "#2979FF",
+    "list.highlightForeground": "#2979FF",
+    "list.inactiveSelectionForeground": "#2979FF",
+    "menu.selectionForeground": "#2979FF",
+    "menubar.selectionForeground": "#2979FF",
+    "notificationLink.foreground": "#2979FF",
+    "panelTitle.activeBorder": "#2979FF",
+    "pickerGroup.foreground": "#2979FF",
+    "progressBar.background": "#2979FF",
+    "scrollbarSlider.activeBackground": "#2979FF50",
+    "settings.headerForeground": "#2979FF",
+    "settings.modifiedItemIndicator": "#2979FF",
+    "tab.activeBorder": "#2979FF",
+    "textLink.foreground": "#2979FF"
+  },
+  "workbench.iconTheme": "Monokai Pro Icons",
+  "workbench.settings.useSplitJSON": true,
+  "workbench.startupEditor": "newUntitledFile",
+  "editor.suggestSelection": "first",
+  "editor.inlineSuggest.enabled": true,
+  "workbench.tree.indent": 16,
+  "workbench.tree.renderIndentGuides": "always",
+  "redhat.telemetry.enabled": false,
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false,
+    "yaml": true,
+    "json": false
+  },
+  "[ruby]": {
+    "editor.defaultFormatter": "Shopify.ruby-lsp",
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.semanticHighlighting.enabled": true
+  },
+  "byesig.fold": false,
+  "byesig.enabled": true,
+  "byesig.opacity": 0.5,
+  "byesig.showIcon": false,
+  "editor.rulers": [
+    120
+  ],
+  "gitlens.codeLens.enabled": false,
+  "gitlens.currentLine.enabled": false,
+  "githubPullRequests.pullBranch": "never",
+  "window.openFoldersInNewWindow": "on",
+  "workbench.editor.revealIfOpen": true,
+  "workbench.editor.enablePreview": false,
+  "remote.SSH.defaultExtensions": [
+    "GitHub.vscode-pull-request-github",
+    "lucax88x.codeacejumper",
+    "redhat.vscode-xml"
+  ],
+  "workbench.editor.wrapTabs": true,
+  "settingsSync.ignoredExtensions": [
+    "gimenete.github-linker"
+  ],
+  "comments.openView": "never",
+  "githubPullRequests.terminalLinksHandler": "github",
+  "editor.fontSize": 11,
+  "task.allowAutomaticTasks": "off",
+  "terminal.external.osxExec": "iTerm.app",
+  "git.suggestSmartCommit": false,
+  "gitlens.telemetry.enabled": false,
+  "workbench.colorTheme": "One Dark Pro",
+  "githubPullRequests.commentExpandState": "collapseAll",
+  "editor.formatOnSave": true,
+  "diffEditor.renderSideBySide": false,
+  "rubyLsp.formatter": "auto",
+  "workbench.editorAssociations": {
+    "*.svg": "default"
+  },
+  "svgPreview.autoOpen": false,
+  "spellright.language": [
+    "en"
+  ],
+  "spellright.documentTypes": [
+    "markdown",
+    "latex"
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "security.promptForRemoteFileProtocolHandling": false,
+  "remote.SSH.connectTimeout": 150,
+  "editor.wordBasedSuggestions": "off",
+  "vim.vimrc.enable": true,
+  "vim.smartRelativeLine": true,
+  "editor.lineNumbers": "relative",
+  "git.openRepositoryInParentFolders": "never",
+  "terminal.integrated.scrollback": 10000,
+  "github.copilot.editor.enableAutoCompletions": true,
+  "vim.sneak": true,
+  "vim.sneakUseIgnorecaseAndSmartcase": true
 }

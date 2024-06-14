@@ -1,12 +1,39 @@
+[core]
+	editor = nvim
+	excludesfile = /Users/evanbrodie/.gitignore_global
+	pager = diff-so-fancy | less --tabs=4 -RFX
+[pager]
+	branch = false
 [alias]
-	br = branch
-	ci = commit
-	co = checkout
-	st = status
-	ignore = update-index --assume-unchanged
-	unignore = update-index --no-assume-unchanged
-	ignored = !git ls-files -v | grep "^[[:lower:]]"
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
   current-branch = rev-parse --abbrev-ref HEAD
   reset-origin = "!f() { git fetch; git reset --hard origin/$(git current-branch); }; f"
-	dad = !curl https://icanhazdadjoke.com/ && git add
+	dad = !curl https://icanhazdadjoke.com/ && echo && echo && git add
+	continue = -c core.editor=true rebase --continue
+[pull]
+	rebase = true
+[fetch]
+	prune = true
+[interactive]
+	diffFilter = diff-so-fancy --patch
+[color]
+	ui = true
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color "diff"]
+	meta = 11
+	frag = magenta bold
+	func = 146 bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+[init]
+	defaultBranch = main
+[push]
+	autoSetupRemote = true
+[rebase]
+	autosquash = true
